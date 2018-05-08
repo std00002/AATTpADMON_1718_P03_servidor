@@ -23,6 +23,17 @@
 	
 	<context:component-scan base-package="org.AATTAA.DNIE" />
 	
+		<beans:bean id="dataSource"
+class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+<beans:property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+<beans:property name="url" value="jdbc:mysql://localhost/dnie"/>
+<beans:property name="username" value="root"/>
+<beans:property name="password" value=""/>
+</beans:bean>
+	
+	<beans:bean id="dao" class="org.AATTAA.DNIE.UsuariosDAO">
+	<beans:property name="dataSource" ref="dataSource"/>
+	</beans:bean>
 	
 	
 </beans:beans>
