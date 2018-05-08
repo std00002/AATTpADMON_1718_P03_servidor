@@ -34,7 +34,7 @@ public class HomeController {
 	
 	
 	/**
-	 * Respuesta del servidor GET al accceder a la URL mostrando la pÃ¡gina principal.
+	 * Respuesta del servidor GET al accceder a la URL mostrando la página principal.
 	 * @param locale
 	 * @param model
 	 * @return vista que se devuelve al cliente
@@ -55,11 +55,12 @@ public class HomeController {
 	 * 
 	 * 
 	 * @param request Object de peticion
-	 * @param nick nick del usuario creado en el registro
-	 * @param nif contraseÃ±a del usuario
+	 * @param nick nick del usuario recogido en la petición HTTP REQUEST enviada del cliente
+	 * @param nif contraseÃ±a del usuario recogida en la petición HTTP REQUEST enviada del cliente
 	 * @param req Object de peticion
 	 * @param locale parametro de Spring
 	 * @param model parametro de la vista en Spring
+	 * @param respuesta variable usada para enviar un mensaje de respuesta a la vista y así anunciar la respuesta al usuario
 	 * @return vista que se devuelve al cliente
 	 */
 	@RequestMapping(value = "/CompruebaBBDD", method = {RequestMethod.POST, RequestMethod.GET})
